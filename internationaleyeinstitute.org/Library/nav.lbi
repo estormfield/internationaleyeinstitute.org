@@ -1,0 +1,16 @@
+  <div class="MenuBarHorizontal" id="nav">    
+  <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li><a href="../index.html">Home</a>      </li>
+      <li><a href="../vision.html">Our Vision</a></li>
+      <li><a href="#" class="MenuBarItemSubmenu">About Us</a>
+        <ul>
+          <li><a href="../history.html">History</a></li>
+          <li><a href="../board.html">Board of Directors</a></li>
+          <li><a href="../donors.html">Donors</a></li>
+        </ul>
+      </li>
+      <li><a href="../newsletters/index.html">Newsletters</a></li>
+      <li><a href="../help.html">How You Can Help</a></li>
+			<li><a href="../contact.html">Contact Us</a>      </li>
+      <li><a href="../photos.html">Photos</a></li>
+    </ul></div>
