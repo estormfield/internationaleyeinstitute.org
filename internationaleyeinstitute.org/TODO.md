@@ -1,0 +1,3 @@
+-Paypal link for donation page (Maj Scholarship)
+-Copy and photos for scholarship page
+-Finish updating newsletter page
