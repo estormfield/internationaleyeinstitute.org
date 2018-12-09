@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Description" content="Maj StormoGipson Scholarship Fund Donation Page">     <meta name="viewport" content="width=device-width, initial-scale=1">     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>International Eye Institute</title>
 <!-- TemplateEndEditable -->
@@ -17,7 +17,7 @@
 <body>
 
 <div id="container">
-  <div id="header"><!-- end .header --><img src="../images/header.jpg" width="960" height="250" alt="International Eye Institute" /></div><!-- #BeginLibraryItem "/Library/nav.lbi" -->  <div class="MenuBarHorizontal" id="nav">    
+  <div id="header"><img src="../images/header.jpg" width="960" height="250" alt="International Eye Institute" /></div>  <div class="MenuBarHorizontal" id="nav">    
   <ul id="MenuBar1" class="MenuBarHorizontal">
       <li><a href="../index.html">Home</a>      </li>
       <li><a href="../vision.html">Our Vision</a></li>
@@ -33,7 +33,7 @@
 			<li><a href="../contact.html">Contact Us</a>      </li>
       <li><a href="../photos.html">Photos</a></li>
     </ul></div>
-<!-- #EndLibraryItem --><!-- TemplateBeginIf cond="Sidebar" --><!-- TemplateBeginEditable name="Sidebar" -->
+<!-- TemplateBeginIf cond="Sidebar" --><!-- TemplateBeginEditable name="Sidebar" -->
 
 <!-- TemplateEndEditable --><!-- TemplateEndIf -->
 
@@ -45,11 +45,11 @@
     <p>Great <a href="#">content</a> coming soon!</p>
     <h2>&nbsp;</h2>
   <!-- TemplateEndEditable --><!-- end .content --></div>
-  <div id="footer"><!-- #BeginLibraryItem "/Library/footer.lbi" -->    <p>© 2011-2015 by International Eye Institute, Inc; a registered 501(c)(3)<br />
+  <div id="footer">    <p>© 2011-2015 by International Eye Institute, Inc; a registered 501(c)(3)<br />
     </a>1814 Lincoln Way, Coeur d'Alene, ID, 83814, (208) 964-0565<br />
     </a>Website Design by <a href="http://www.communitygrowthweb.com/" target="_blank">Community Growth Web</a>
-    </p><!-- #EndLibraryItem --><!-- end .footer --></div>
-  <!-- end .container --></div>
+    </p></div>
+ </div>
 <script type="text/javascript">
 var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
 </script>
