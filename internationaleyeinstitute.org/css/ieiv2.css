@@ -1,0 +1,103 @@
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    line-height: 1.4;
+    background-color: #485237;
+    background-image: url(../images/bg-body.jpg);
+    background-repeat: repeat;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+    /* the auto value on the sides, coupled with the width, centers the layout */
+    background-color: #F5F6F1;
+    border-right-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 6px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-color: #485237;
+    border-bottom-color: #485237;
+    border-left-color: #485237;
+}
+
+#breadcrumbs {
+    padding-top: 0.2em;
+    padding-left: .4em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+    font-size: 90%;
+}
+
+article a:link,
+article a:active,
+article a:visited,
+article a:focus,
+#breadcrumbs a:link,
+#breadcrumbs a:active,
+#breadcrumbs a:visited,
+#breadcrumbs a:focus {
+    color: #076735;
+    text-decoration: underline;
+    outline: none;
+}
+
+article a:hover,
+#breadcrumbs a:hover {
+    color: #C30;
+    text-decoration: underline;
+    outline: none;
+}
+
+article {
+    width: 600px;
+    line-height: 1.5em;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+}
+
+footer {
+    padding: 10px 0;
+    position: relative;
+    /* this gives IE6 hasLayout to properly clear */
+    clear: both;
+    /* this clear property forces the .container to understand where the columns end and contain them */
+    background-image: url(../images/bg-nav.jpg);
+    background-repeat: repeat;
+    text-align: center;
+}
+
+footer a:link,
+footer a:active,
+footer a:visited,
+footer a:focus {
+    color: #600;
+    text-decoration: underline;
+    outline: none;
+}
+
+footer a:hover {
+    color: #f1e7b6;
+    text-decoration: underline;
+    outline: none;
+}
