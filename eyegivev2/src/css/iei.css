@@ -223,7 +223,7 @@ a img { /* this selector removes the default blue border displayed in some brows
     padding: 0;
     overflow: hidden;
     background-color: #333;
-	background: url('./down-with-bg.jpg'); /* Updated background */
+	background: url('../images/down-with-bg.jpg'); /* Updated background */
 
 }
 
@@ -240,7 +240,7 @@ a img { /* this selector removes the default blue border displayed in some brows
 }
 
 #menuBar li a:hover {
-	background: url('./down-with-bg-hover.jpg'); /* Updated hover background */
+	background: url('../images/down-with-bg-hover.jpg'); /* Updated hover background */
 }
 
 #menuBar li ul {
