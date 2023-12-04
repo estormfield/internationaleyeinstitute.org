@@ -1,0 +1,63 @@
+@charset "UTF-8";
+#footer a:link,
+#footer a:active,
+#footer a:visited,
+#footer a:focus
+{
+	color: #600;
+	text-decoration: underline;
+	outline: none;
+}
+
+#footer a:hover
+{
+	color: #f1e7b6;
+	text-decoration: underline;
+	outline: none;
+}
+
+
+#content a:link,
+#content a:active,
+#content a:visited,
+#content a:focus,
+#content-wide a:link,
+#content-wide a:active,
+#content-wide a:visited,
+#content-wide a:focus,
+#breadcrumbs a:link,
+#breadcrumbs a:active,
+#breadcrumbs a:visited,
+#breadcrumbs a:focus
+{
+	color: #076735;
+	text-decoration: underline;
+	outline: none;
+}
+
+#content a:hover,
+#content-wide a:hover,
+#breadcrumbs a:hover
+{
+	color: #C30;
+	text-decoration: underline;
+	outline: none;
+}
+
+
+#sidebar1 a:link,
+#sidebar1 a:active,
+#sidebar1 a:visited,
+#sidebar1 a:focus
+{
+	color: #076735;
+	text-decoration: underline;
+	outline: none;
+}
+
+#sidebar1 a:hover
+{
+	color: #660000;
+	text-decoration: underline;
+	outline: none;
+}
