@@ -25,7 +25,6 @@ export function html() {
 // Task for copying and minifying CSS
 export function css() {
     return src('src/css/**/*.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(dest('dist/css'))
         .pipe(browserSync.stream());
 }
@@ -33,7 +32,6 @@ export function css() {
 // Task for copying and minifying JS
 export function js() {
     return src('src/js/**/*.js')
-        .pipe(uglify())
         .pipe(dest('dist/js'))
         .pipe(browserSync.stream());
 }
