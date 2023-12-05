@@ -43,6 +43,10 @@ export function images() {
     return src('src/images/**/*')
         .pipe(dest('dist/images'));
 }
+export function scripts() {
+    return src('src/scripts/**/*')
+        .pipe(dest('dist/scripts'));
+}
 
 // Static server + watching html/css/js files
 function serve() {
@@ -58,7 +62,7 @@ function serve() {
 }
 
 // Build task to run all tasks for production
-const build = series( parallel(html, css, js, images));
+const build = series( parallel(html, scripts, css, js, images));
 
 // Default task for development
 export default series(build, serve);

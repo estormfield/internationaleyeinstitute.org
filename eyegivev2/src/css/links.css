@@ -1,63 +1,41 @@
 @charset "UTF-8";
-#footer a:link,
-#footer a:active,
-#footer a:visited,
-#footer a:focus
-{
-	color: #600;
-	text-decoration: underline;
-	outline: none;
+
+:root {
+    --footer-link-color: #600;
+    --footer-link-hover-color: #f1e7b6;
+    --content-link-color: #076735;
+    --content-link-hover-color: #C30;
+    --sidebar-link-color: #076735;
+    --sidebar-link-hover-color: #660000;
 }
 
-#footer a:hover
-{
-	color: #f1e7b6;
-	text-decoration: underline;
-	outline: none;
+#footer a, #content a, #content-wide a, #breadcrumbs a, #sidebar1 a {
+    color: var(--content-link-color);
+    text-decoration: underline;
+    outline: none;
 }
 
-
-#content a:link,
-#content a:active,
-#content a:visited,
-#content a:focus,
-#content-wide a:link,
-#content-wide a:active,
-#content-wide a:visited,
-#content-wide a:focus,
-#breadcrumbs a:link,
-#breadcrumbs a:active,
-#breadcrumbs a:visited,
-#breadcrumbs a:focus
-{
-	color: #076735;
-	text-decoration: underline;
-	outline: none;
+#footer a:hover {
+    color: var(--footer-link-hover-color);
 }
 
-#content a:hover,
-#content-wide a:hover,
-#breadcrumbs a:hover
-{
-	color: #C30;
-	text-decoration: underline;
-	outline: none;
+#content a:hover, #content-wide a:hover, #breadcrumbs a:hover {
+    color: var(--content-link-hover-color);
+}
+
+#sidebar1 a:hover {
+    color: var(--sidebar-link-hover-color);
 }
 
 
-#sidebar1 a:link,
-#sidebar1 a:active,
-#sidebar1 a:visited,
-#sidebar1 a:focus
-{
-	color: #076735;
-	text-decoration: underline;
-	outline: none;
+/* Simplify repeated selectors using :is() */
+#footer a:is(:link, :active, :visited, :focus) {
+    color: var(--footer-link-color);
 }
 
-#sidebar1 a:hover
-{
-	color: #660000;
-	text-decoration: underline;
-	outline: none;
+#content a:is(:link, :active, :visited, :focus),
+#content-wide a:is(:link, :active, :visited, :focus),
+#breadcrumbs a:is(:link, :active, :visited, :focus),
+#sidebar1 a:is(:link, :active, :visited, :focus) {
+    color: var(--content-link-color);
 }
