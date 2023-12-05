@@ -11,36 +11,62 @@ const browserSync = browserSyncBase.create();
 // Clean dist directory
 export const clean = () => del(['dist/*']);
 
-// Task for processing HTML
-export const html = () => src('src/html/**/*.html')
-    .pipe(fileInclude({ prefix: '@@', basepath: '@file' }))
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream());
+// Task for including files and minifying HTML
+export function html() {
+    return src('src/html/**/*.html')
+        .pipe(fileInclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('dist'))
+        .pipe(browserSync.stream());
+}
 
-// Task for processing CSS
-export const css = () => src('src/css/**/*.css')
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(dest('dist/css'))
-    .pipe(browserSync.stream());
+// Task for copying and minifying CSS
+export function css() {
+    return src('src/css/**/*.css')
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(dest('dist/css'))
+        .pipe(browserSync.stream());
+}
 
-// Task for processing JS
-export const js = () => src('src/js/**/*.js')
-    .pipe(uglify())
-    .pipe(dest('dist/js'))
-    .pipe(browserSync.stream());
+// Task for copying and minifying JS
+export function js() {
+    return src('src/js/**/*.js')
+        .pipe(uglify())
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream());
+}
 
-// Task for copying assets
-export const assets = () => src('src/assets/**/*')
-    .pipe(dest('dist/assets'));
+// Task for copying images
+export function images() {
+    return src('src/images/**/*')
+        .pipe(dest('dist/images'));
+}
+export function scripts() {
+    return src('src/scripts/**/*.js')
+        .pipe(dest('dist/scripts'));
+}
+export function pdf() {
+    return src('src/pdf/**/*.pdf')
+        .pipe(dest('dist/pdf'));
+}
 
-// Static server + watching files
+// Static server + watching html/css/js files
 function serve() {
-    browserSync.init({ server: "./dist" });
-    watch(['src/html/**/*.html', 'src/layouts/**/*.html', 'src/partials/**/*.html'], html);
+    browserSync.init({
+        server: "./dist"
+    });
+
+    watch('src/html/**/*.html', html);
+    watch('src/layouts/**/*.html', html);
+    watch('src/partials/**/*.html', html);
     watch('src/css/**/*.css', css);
     watch('src/js/**/*.js', js);
 }
 
-// Build and default tasks
-const build = series(parallel(html, css, js, assets));
+// Build task to run all tasks for production
+const build = series( parallel(html, scripts, pdf,css, js, images));
+
+// Default task for development
 export default series(build, serve);
