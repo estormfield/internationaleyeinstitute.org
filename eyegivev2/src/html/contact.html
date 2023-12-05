@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../layouts/head.html')
+
+<body>
+  <div id="container">
+    @@include('../partials/header.html')
+    @@include('../partials/navigation.html')
+    @@include('../layouts/breadcrumb.html', {
+    "name": "&gt; Contact Us",
+    })
+    <aside id="sidebar1">
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="images/hands-IMG_0566.jpg" alt="Helping hands" width="300" height="200" class="sidebar-img" /></p>
+
+    </aside>
+
+    <main id="content">
+      <div id="content-narrow">
+        <h2>Contact Information</h2>
+        <p style="font-weight: bold; margin-bottom: 0;">Correspondence and donations:</p>
+        <p>International Eye Institute, Inc.<br />
+          310 S 13th St,<br />
+          Coeur d’Alene, Idaho, 83814</p>
+        <p>email: <a title="mailto:info@eyegive.org" href="mailto:info@eyegive.org">info@eyegive.org</a>
+          <br />phone: 208.667.2531
+        </p>
+        <p style="font-weight: bold; margin-bottom: 0;">Parcels or equipment delivery:</p>
+        <p>International Eye Institute, Inc.<br />
+          1110 E Polston Ave, Ste 1<br />
+          Post Falls, ID 83854-6139<br />
+        </p>
+      </div>
+    </main>
+    @@include('../partials/footer.html')
+  </div>
+</body>
+
+</html>
