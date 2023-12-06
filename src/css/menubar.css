@@ -68,13 +68,14 @@
 }
 
 #menuBar li a:hover {
-    background: red;
-    /* background: url('../images/bg-body.jpg');} */
+    /* background: red; */
+    padding:6px;
+    background: url('../images/bg-body.jpg');
 }
 
 #menuBar li.has-submenu a:hover {
-    background: red;
-    /* background: url('../images/down-with-bg-hover.jpg'); Hover background for links */
+    /* background: red; */
+    background: url('../images/down-with-bg-hover.jpg');
 }
 
 @media screen and (max-width: 600px) {

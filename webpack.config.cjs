@@ -4,6 +4,8 @@ const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 
 // Function to get all HTML files in a directory (excluding subdirectories)
 function getHtmlFiles(dir) {
@@ -33,15 +35,6 @@ module.exports = {
     path: path.resolve(__dirname, 'internationaleyeinstitute.org'),
     filename: 'js/bundle.js',
   },
-  module: {
-    rules: [
-      // ... other rules
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
   plugins: [
     new CleanWebpackPlugin(),
     ...createHtmlPlugins(partials),
@@ -56,17 +49,16 @@ module.exports = {
 
       ],
     }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['internationaleyeinstitute.org'] },
+      files: [
+        'src/**/*.html',
+        'src/css/**/*.css',
+        'src/js/**/*.js'
+      ]
+    })
   ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'internationaleyeinstitute.org'),
-    },
-    watchFiles: {
-      paths: ['src/**/*.html'],
-    },
-    compress: true,
-    port: 9000,
-    open: true,
-    liveReload: true,
-  },
+ 
 };

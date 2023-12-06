@@ -4,14 +4,19 @@
   "description": "A website project with a build process using Gulp.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "build": "webpack --mode production"
+    "start": "concurrently \"nodemon\" \"watch-html\"",
+    "start2": "webpack serve --mode development",
+    "build": "webpack",
+    "start3": "nodemon",
+    "deploy": "webpack --mode production",
+    "watch-html": "browser-sync start --server 'internationaleyeinstitute.org' --files '**/*.*'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "browser-sync": "^2.29.3",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
@@ -22,7 +27,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2",
-    "webpack-plugin-serve": "^1.6.0"
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
   }
 }
