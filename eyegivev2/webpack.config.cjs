@@ -43,6 +43,8 @@ module.exports = {
                 { from: 'src/pdf', to: 'pdf' },
                 { from: 'src/css', to: 'css' },
                 { from: 'src/html/newsletters', to: 'newsletters' },
+                { from: './src/icons/favicon.ico', to: 'favicon.ico' }, // Update path accordingly
+
             ],
         }),
     ],
