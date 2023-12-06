@@ -1,0 +1,92 @@
+#menuBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    /* Ensure dropdowns are not clipped */
+    background: url('../images/bg-nav.jpg');
+    display: flex;
+    /* Flex layout for equal stretching of li items */
+    border: 1px solid black;
+    /* Black border around the menu bar */
+}
+
+#menuBar li {
+    flex: 1;
+    /* Each li item takes equal space */
+    border-right: 1px solid black;
+    /* Border between items */
+    height: 30px;
+    /* Set height for li */
+    align-items: center;
+    /* Center content vertically */
+    position: relative;
+    /* Positioning context for dropdowns */
+    display: flex;
+}
+
+#menuBar li:last-child {
+    border-right: none;
+    /* Remove border from the last li item */
+}
+
+#menuBar li a {
+    display: block;
+    color: black;
+    /* Font color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 100%;
+    /* Full width of the li */
+}
+
+#menuBar li.has-submenu {
+    background: url('../images/down-with-bg.jpg');
+    /* Background for li with submenu */
+}
+
+#menuBar li ul {
+    display: none;
+    /* Hide dropdown initially */
+    position: absolute;
+    width: 100%;
+    /* Dropdown width matches li */
+    top: 100%;
+    /* Position dropdown directly below li */
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background: url('../images/down-with-bg.jpg');
+    /* Background for dropdown */
+    z-index: 2;
+    /* Ensure dropdown is above other elements */
+}
+
+#menuBar li:hover>ul {
+    display: block;
+    /* Show dropdown on hover */
+}
+
+#menuBar li a:hover {
+    background: red;
+    /* background: url('../images/bg-body.jpg');} */
+}
+
+#menuBar li.has-submenu a:hover {
+    background: red;
+    /* background: url('../images/down-with-bg-hover.jpg'); Hover background for links */
+}
+
+@media screen and (max-width: 600px) {
+    #menuBar {
+        flex-direction: column;
+        /* Stack li items vertically on small screens */
+    }
+
+    #menuBar li {
+        border-bottom: 1px solid black;
+        /* Border between items on small screens */
+        border-right: none;
+        /* Remove right border on small screens */
+    }
+}
