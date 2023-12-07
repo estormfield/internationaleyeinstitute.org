@@ -30,6 +30,8 @@ function createHtmlPlugins(partials) {
 }
 module.exports = {
   mode: 'development',
+  entry: './src/js/index.js',
+
   output: {
     path: path.resolve(__dirname, 'internationaleyeinstitute.org'),
     filename: 'js/bundle.js',
