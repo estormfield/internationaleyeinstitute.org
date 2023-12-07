@@ -1,7 +1,7 @@
 .slideshow {
     position: relative;
     /* This ensures that the child elements can be positioned in relation to this container */
-    width: 100vw;
+    /* width: 100vw; */
     height: 50vwvw;
     display: flex;
     justify-content: center;
@@ -11,12 +11,15 @@
 .slide {
     display: none;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transform: scale(0.8);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .slide.active {
     display: block;
     opacity: 1;
+    transform: scale(1);
+
 }
 
 .slideshow-controls {
@@ -27,15 +30,20 @@
     /* This centers the controls */
     text-align: center;
     position: static;
-    margin-left: 550px;
+    margin-left: 475px;
     margin-bottom: 50px;
-}
-
-button {
-    margin: 0 10px;
 }
 
 button {
     background: url('../images/bg-nav.jpg');
     margin: 0 10px;
-}
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: black /* Adjust as per your design */
+  }
+
+  button:hover {
+    background-color: #000; /* Example hover color */
+  }
