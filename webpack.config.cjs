@@ -30,11 +30,11 @@ function createHtmlPlugins(partials) {
 }
 module.exports = {
   mode: 'development',
-  entry: './src/js/index.js',
+  // entry: './src/js/index.js',
 
   output: {
     path: path.resolve(__dirname, 'internationaleyeinstitute.org'),
-    filename: 'js/bundle.js',
+    // filename: 'index.js',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -44,8 +44,9 @@ module.exports = {
         { from: 'src/images', to: 'images' },
         { from: 'src/pdf', to: 'pdf' },
         { from: 'src/css', to: 'css' },
+        { from: 'src/js', to: 'js' },
         { from: 'src/html/newsletters', to: 'newsletters' },
-        { from: './src/icons/favicon.ico', to: 'favicon.ico' }, // Update path accordingly
+        { from: 'src/icons/favicon.ico', to: 'favicon.ico' }, // Update path accordingly
 
       ],
     }),
