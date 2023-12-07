@@ -1,0 +1,4 @@
+{
+    "server": { "baseDir": "./internationaleyeinstitute.org" },
+    "files": ["*.html", "css/*.css"]
+  }

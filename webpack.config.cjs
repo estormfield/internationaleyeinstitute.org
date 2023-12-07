@@ -4,7 +4,6 @@ const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 // Function to get all HTML files in a directory (excluding subdirectories)
@@ -41,7 +40,6 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/images', to: 'images' },
-        { from: 'src/scripts', to: 'scripts' },
         { from: 'src/pdf', to: 'pdf' },
         { from: 'src/css', to: 'css' },
         { from: 'src/html/newsletters', to: 'newsletters' },
@@ -49,16 +47,6 @@ module.exports = {
 
       ],
     }),
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      server: { baseDir: ['internationaleyeinstitute.org'] },
-      files: [
-        'src/**/*.html',
-        'src/css/**/*.css',
-        'src/js/**/*.js'
-      ]
-    })
   ],
  
 };

@@ -1,79 +1,41 @@
-@charset "UTF-8";
-
-.jshowoff {
-    width: 300px;
-    height: 400px;
-    position: relative; /* Ensure relative positioning for absolute children */
+.slideshow {
+    position: relative;
+    /* This ensures that the child elements can be positioned in relation to this container */
+    width: 100vw;
+    height: 50vwvw;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-.jshowoff img {
-    vertical-align: middle;
+.slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.slideshow-controls {
+    bottom: -50px;
+    /* Adjust this value as needed to place the buttons 30px below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    /* This centers the controls */
     text-align: center;
-    width: 100%; /* Make sure images fit the container */
-    height: auto; /* Maintain aspect ratio */
+    position: static;
+    margin-left: 550px;
+    margin-bottom: 50px;
 }
 
-.jshowoff h2,
-.jshowoff p {
-    font-size: 18px;
-    padding: 15px 20px 0px;
-    margin: 0;
-    color: #333; /* Improved text visibility */
+button {
+    margin: 0 10px;
 }
 
-.jshowoff p {
-    font-size: 13px;
-    line-height: 18px; /* Slightly increase line height for readability */
-}
-
-.jshowoff-slidelinks,
-.jshowoff-controls {
-    position: absolute;
-    bottom: 10px; /* Position controls at the bottom */
-    left: 0;
-    width: 100%; /* Stretch across the slider */
-    text-align: center; /* Center align the controls */
-    z-index: 10; /* Ensure they are above other elements */
-}
-
-.jshowoff-slidelinks a,
-.jshowoff-controls a {
-    display: inline-block; /* Use inline-block for better control */
-    color: #FFF;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 11px;
-    line-height: 14px;
-    background-color: #630;
-    margin: 0 5px; /* Uniform margin for spacing */
-    padding: 5px 10px;
-}
-
-.jshowoff-slidelinks a.jshowoff-active,
-#features .jshowoff-controls a:hover {
-    background: #060;
-    color: #FFC;
-}
-
-#features .jshowoff-controls p a {
-    font-size: 12px;
-    line-height: 15px;
-    padding: 4px 8px;
-}
-
-#content-float-right > div > p {
-    position: absolute;
-}
-
-#features .jshowoff-controls a:link,
-#features .jshowoff-controls a:active,
-#features .jshowoff-controls a:visited,
-#features .jshowoff-controls a:focus,
-.jshowoff-1-play,
-.jshowoff-1-prev,
-.jshowoff-1-next {
-	text-decoration: none;
-	outline: none;
-	color: #030;
-	background-image: url(../images/bg-nav.jpg);
+button {
+    background: url('../images/bg-nav.jpg');
+    margin: 0 10px;
 }
