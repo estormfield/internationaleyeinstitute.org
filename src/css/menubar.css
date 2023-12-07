@@ -25,6 +25,9 @@
     display: flex;
 }
 
+
+
+
 #menuBar li:last-child {
     border-right: none;
     /* Remove border from the last li item */
@@ -42,7 +45,7 @@
 }
 
 #menuBar li.has-submenu {
-    background: url('../images/down-with-bg.jpg');
+    background: url('../images/bg-nav.jpg');
     /* Background for li with submenu */
 }
 
@@ -56,7 +59,7 @@
     /* Position dropdown directly below li */
     left: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    background: url('../images/down-with-bg.jpg');
+    background: url('../images/bg-nav.jpg');
     /* Background for dropdown */
     z-index: 2;
     /* Ensure dropdown is above other elements */
@@ -69,14 +72,30 @@
 
 #menuBar li a:hover {
     /* background: red; */
-    padding:6px;
+    padding: 6px;
     background: url('../images/bg-body.jpg');
 }
 
 #menuBar li.has-submenu a:hover {
     /* background: red; */
-    background: url('../images/down-with-bg-hover.jpg');
+    background: url('../images/bg-body.jpg');
+    white-space: nowrap; /* Prevent text wrapping */
+
 }
+
+#menuBar li.has-submenu ul li {
+    border-bottom: 1px solid black;
+    white-space: nowrap; /* Prevent text wrapping */
+
+    /* Add bottom border to submenu li items */
+}
+
+#menuBar li.has-submenu ul li:last-child {
+    border-bottom: none;
+    /* Remove bottom border from the last submenu li item */
+}
+
+
 
 @media screen and (max-width: 600px) {
     #menuBar {

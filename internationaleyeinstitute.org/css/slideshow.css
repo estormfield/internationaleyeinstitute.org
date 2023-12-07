@@ -1,144 +1,79 @@
 @charset "UTF-8";
-/* CSS Document for IEI*/
 
-/*------------*/
-#features {
-	overflow: hidden;
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	-moz-border-radius-topleft: 6px;
-	-moz-border-radius-topright: 6px;
-	margin-top: 0px;
-	margin-right: 0;
-	margin-bottom: 10px;
-	padding-top: 10px;
-	padding-right: 4px;
-	text-align: center;
-	padding-left: 0px;
-	margin-left: 0px;
-	}
-
-#features img{
-	text-align: center;
-	vertical-align: middle;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	border: 2px solid #030;
-}
-
-.caption
-{
-	text-align: center;
-	font-size: 100%;
-	font-weight: bold;
-	color: #000;
-	margin-top: 0px;
-	padding-top: 0px;
-}
-
-.slide
-{
-	position: static;
-	top: 220px;
-}
-
-/*size of the frame */
 .jshowoff {
-	width: 300px;
-	height: 410px;
-	}
-.jshowoff div, .jshowoff img, .jshowoff {
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	}
-	
-.jshowoff img {
-	verical-align: middle;
-	text-align: center;
+    width: 300px;
+    height: 400px;
+    position: relative; /* Ensure relative positioning for absolute children */
 }
-.jshowoff h2, .jshowoff p {
-	font-size: 18px;
-	padding: 15px 20px 0px;
-	margin: 0;
-	}
+
+.jshowoff img {
+    vertical-align: middle;
+    text-align: center;
+    width: 100%; /* Make sure images fit the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.jshowoff h2,
 .jshowoff p {
-	font-size: 13px;
-	line-height: 15px;
-	}
-#eddie {
-	float: right;
-	padding: 15px 20px 15px 20px;
-	}
-.jshowoff-slidelinks {
-	margin: 0;
-	padding-top: 0;
-	padding-right: 0;
-	padding-bottom: 0;
-	padding-left: 0;
-	}
-.jshowoff-slidelinks a, .jshowoff-controls a {
-	display: block;
-	color: #FFF;
-	float: left;
-	text-decoration: none;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	outline: none;
-	font-size: 11px;
-	line-height: 14px;
-	background-color: #630;
-	margin-right: 0;
-	margin-bottom: 0;
-	padding-top: 5px;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-bottom: 5px;
-	margin-left: 20px;
-	}
-.jshowoff-slidelinks a.jshowoff-active {
-	background: #fff;
-	color: #030;
-	}
-p.jshowoff-controls {
-	overflow: auto;
-	height: 1%;
-	margin-top: 0;
-	margin-right: 0;
-	margin-bottom: 20px;
-	padding-top: 30px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	margin-left: 20px;
-	}
+    font-size: 18px;
+    padding: 15px 20px 0px;
+    margin: 0;
+    color: #333; /* Improved text visibility */
+}
+
+.jshowoff p {
+    font-size: 13px;
+    line-height: 18px; /* Slightly increase line height for readability */
+}
+
+.jshowoff-slidelinks,
+.jshowoff-controls {
+    position: absolute;
+    bottom: 10px; /* Position controls at the bottom */
+    left: 0;
+    width: 100%; /* Stretch across the slider */
+    text-align: center; /* Center align the controls */
+    z-index: 10; /* Ensure they are above other elements */
+}
+
+.jshowoff-slidelinks a,
+.jshowoff-controls a {
+    display: inline-block; /* Use inline-block for better control */
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 14px;
+    background-color: #630;
+    margin: 0 5px; /* Uniform margin for spacing */
+    padding: 5px 10px;
+}
+
+.jshowoff-slidelinks a.jshowoff-active,
+#features .jshowoff-controls a:hover {
+    background: #060;
+    color: #FFC;
+}
+
 #features .jshowoff-controls p a {
-	font-size: 12px;
-	line-height: 15px;
-	padding-top: 4px;
-	padding-right: 8px;
-	padding-bottom: 5px;
-	padding-left: 12px;
-	}
-	
-#features .jshowoff-controls a:link, 
-#features .jshowoff-controls a:active, 
-#features .jshowoff-controls a:visited, 
-#features .jshowoff-controls a:focus
-{
+    font-size: 12px;
+    line-height: 15px;
+    padding: 4px 8px;
+}
+
+#content-float-right > div > p {
+    position: absolute;
+}
+
+#features .jshowoff-controls a:link,
+#features .jshowoff-controls a:active,
+#features .jshowoff-controls a:visited,
+#features .jshowoff-controls a:focus,
+.jshowoff-1-play,
+.jshowoff-1-prev,
+.jshowoff-1-next {
 	text-decoration: none;
 	outline: none;
 	color: #030;
 	background-image: url(../images/bg-nav.jpg);
 }
-
-#features .jshowoff-controls a:hover
-{
-	text-decoration: none;
-	outline: none;
-	color: #FFC;
-	background-color: #060;
-}
-
-	
-/* End for Slideshow */
