@@ -6,20 +6,17 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
-// Function to get all HTML files in a directory (excluding subdirectories)
 function getHtmlFiles(dir) {
   return fs.readdirSync(dir)
     .filter(file => file.endsWith('.html') && fs.statSync(path.join(dir, file)).isFile());
 }
 
-// Get all partials from the src/html directory
 const partials = getHtmlFiles('./src/html/pages');
 
-// Function to create a list of HtmlWebpackPlugin instances
 function createHtmlPlugins(partials) {
   return partials.map(partial => {
-    // Read the template and replace the placeholder with the partial name
     const templateContent = fs.readFileSync('./src/html/layout.html', 'utf8');
     const contentWithPartial = templateContent.replace('<!-- %%PARTIAL%% -->', fs.readFileSync(`./src/html/pages/${partial}`, 'utf8'));
 
@@ -66,7 +63,7 @@ module.exports = {
         { from: 'src/assets/css', to: 'css' },
         { from: 'src/assets/js', to: 'js' },
         { from: 'src/html/newsletters', to: 'newsletters' },
-        { from: 'src/assets/icons/favicon.ico', to: 'favicon.ico' }, // Update path accordingly
+        { from: 'src/assets/icons/favicon.ico', to: 'favicon.ico' },
       ],
     }),
     new MiniCssExtractPlugin({
@@ -74,5 +71,18 @@ module.exports = {
     }),
     new OptimizeCSSAssetsPlugin({}),
     new HtmlMinimizerPlugin(),
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.imageminMinify,
+        options: {
+          plugins: [
+            'imagemin-gifsicle',
+            'imagemin-mozjpeg',
+            'imagemin-pngquant',
+            'imagemin-svgo',
+          ],
+        },
+      },
+    }),
   ],
 };
