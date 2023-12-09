@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+:root {
+    --footer-link-color: #600;
+    --footer-link-hover-color: #f1e7b6;
+    --content-link-color: #076735;
+    --content-link-hover-color: #C30;
+    --sidebar-link-color: #076735;
+    --sidebar-link-hover-color: #660000;
+}
+
+#footer a, #content a, #content-wide a, #breadcrumbs a, #sidebar1 a {
+    color: var(--content-link-color);
+    text-decoration: underline;
+    outline: none;
+}
+
+#footer a:hover {
+    color: var(--footer-link-hover-color);
+}
+
+#content a:hover, #content-wide a:hover, #breadcrumbs a:hover {
+    color: var(--content-link-hover-color);
+}
+
+#sidebar1 a:hover {
+    color: var(--sidebar-link-hover-color);
+}
+
+
+/* Simplify repeated selectors using :is() */
+#footer a:is(:link, :active, :visited, :focus) {
+    color: var(--footer-link-color);
+}
+
+#content a:is(:link, :active, :visited, :focus),
+#content-wide a:is(:link, :active, :visited, :focus),
+#breadcrumbs a:is(:link, :active, :visited, :focus),
+#sidebar1 a:is(:link, :active, :visited, :focus) {
+    color: var(--content-link-color);
+}
