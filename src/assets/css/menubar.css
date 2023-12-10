@@ -94,19 +94,3 @@
     border-bottom: none;
     /* Remove bottom border from the last submenu li item */
 }
-
-
-
-@media screen and (max-width: 600px) {
-    #menuBar {
-        flex-direction: column;
-        /* Stack li items vertically on small screens */
-    }
-
-    #menuBar li {
-        border-bottom: 1px solid black;
-        /* Border between items on small screens */
-        border-right: none;
-        /* Remove right border on small screens */
-    }
-}
