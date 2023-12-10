@@ -36,12 +36,11 @@
 #menuBar li a {
     display: block;
     color: black;
-    /* Font color */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     width: 100%;
-    /* Full width of the li */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 #menuBar li.has-submenu {
@@ -76,6 +75,7 @@
     background: url('../images/bg-body.jpg');
 }
 
+
 #menuBar li.has-submenu a:hover {
     /* background: red; */
     background: url('../images/bg-body.jpg');
@@ -93,20 +93,4 @@
 #menuBar li.has-submenu ul li:last-child {
     border-bottom: none;
     /* Remove bottom border from the last submenu li item */
-}
-
-
-
-@media screen and (max-width: 600px) {
-    #menuBar {
-        flex-direction: column;
-        /* Stack li items vertically on small screens */
-    }
-
-    #menuBar li {
-        border-bottom: 1px solid black;
-        /* Border between items on small screens */
-        border-right: none;
-        /* Remove right border on small screens */
-    }
 }
