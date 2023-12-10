@@ -154,3 +154,55 @@ a img {
 .smaller {
 	font-size: 75%;
 }
+
+.story {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    padding: 20px;
+}
+.story:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.story img {
+	max-height: 400px;
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+.story-text {
+    width: 50%;
+}
+.story:last-child {
+	justify-content: center;
+	text-align: center;
+}
+.story:last-child img {
+	display: none;
+}
+.story:last-child .story-text {
+	width: 100%;
+}
+
+.new-content {
+    background-color: #F5F6F1; /* Light background to match container */
+    color: #485237; /* Text color to match the theme */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #485237; /* Border color to match theme */
+    text-align: center;
+    font-size: 110%; /* Slightly larger font size to draw attention */
+    font-family: Georgia, "Times New Roman", Times, serif; /* Stylish font */
+}
+
+/* Styling for the link within the new content div */
+.new-content a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.new-content a:hover {
+    text-decoration: underline;
+}

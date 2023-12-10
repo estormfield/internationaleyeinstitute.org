@@ -36,12 +36,11 @@
 #menuBar li a {
     display: block;
     color: black;
-    /* Font color */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     width: 100%;
-    /* Full width of the li */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 #menuBar li.has-submenu {
@@ -75,6 +74,7 @@
     padding: 6px;
     background: url('../images/bg-body.jpg');
 }
+
 
 #menuBar li.has-submenu a:hover {
     /* background: red; */
